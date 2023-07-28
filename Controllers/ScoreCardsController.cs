@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ScoreCardPlus;
 using ScoreCardPlus.Models;
+using System.Reflection;
 
 namespace ScoreCardPlus.Controllers
 {
@@ -80,9 +81,12 @@ namespace ScoreCardPlus.Controllers
 
             return NoContent();
         }
-
-        // POST: api/ScoreCards
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Adds new ScoreCard
+        /// </summary>
+        /// <param name="scoreCard"></param>
+        /// <returns></returns>
+      
         [HttpPost]
         public async Task<ActionResult<ScoreCard>> PostScoreCard(ScoreCard scoreCard)
         {
@@ -95,7 +99,6 @@ namespace ScoreCardPlus.Controllers
 
             return CreatedAtAction("GetScoreCard", new { id = scoreCard.ID }, scoreCard);
         }
-
         // DELETE: api/ScoreCards/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteScoreCard(Guid id)
