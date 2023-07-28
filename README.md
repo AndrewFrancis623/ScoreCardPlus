@@ -9,11 +9,32 @@ A database housing these scorecards will be created using SQLlite/mySQL/etc.
 The main goal is to have a functioning API that returns what the user adds and have that info connected to the applicable subject.
 Future plans outside the scope of the class project would include linking the API with a front end such as react.
 
+***DISCLAIMER***
+Originally, a project I had been working on for some weeks not using API but a MVC had developed some issues.
+Working to resolve these issues ended up in some late night mistakes, instead of asking for help I thought I had it,
+I did not have it... failed connection to repository resulted and after modifying the solution file it got worse,
+This resulted in full deletion of project and restart with only a week to go, luckily I had partial complete API from class.
+Using this I modified it and made it into a Scorecard API and made it like a recording journal that would record all the scorecards and retrive/edit when searched for.
+Another few features added broke the soulution and in a scramble to fix them I messed up the git when pushing and tried to fix that
+NOTE TO SELF >> Do not use commands of which you do not understand.
+In doing so I somehow deleted the file, had to create a new project, remove old from repo, add new to repo got an error removed repo, deleted repo made new repo spend 
+the last 3 days of class building and implementing the same features as previous API such as below while also making sure to complete at leats 5 commits, DONE. 
+
 ## Getting Started
 
-### Dependencies
+### Features
 
-* Windows, VisualStudio, SwaggerUI, EF Core
+* API
+* Entity framework
+* List/database
+* Async
+* Generics
+* Json
+* Multiple classes
+* Inheritance
+* I know theres a few more features but these are the highlights.
+
+
 
 ### Installing
 
