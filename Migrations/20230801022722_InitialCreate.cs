@@ -16,11 +16,10 @@ namespace ScoreCardPlus.Migrations
                 columns: table => new
                 {
                     ID = table.Column<Guid>(type: "TEXT", nullable: false),
-                    CourseName = table.Column<string>(type: "TEXT", nullable: true),
-                    HoleNumber = table.Column<int>(type: "INTEGER", nullable: false),
-                    ParScore = table.Column<int>(type: "INTEGER", nullable: false),
-                    UserName = table.Column<string>(type: "TEXT", nullable: true),
-                    UserScore = table.Column<int>(type: "INTEGER", nullable: false)
+                    Course = table.Column<string>(type: "TEXT", nullable: true),
+                    NumberofHoles = table.Column<int>(type: "INTEGER", nullable: false),
+                    ParCourseTotal = table.Column<int>(type: "INTEGER", nullable: false),
+                    NumberofPlayers = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

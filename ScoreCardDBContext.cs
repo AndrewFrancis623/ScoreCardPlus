@@ -9,7 +9,7 @@ namespace ScoreCardPlus
     {
 
         public DbSet<ScoreCard> ScoreCards { get; set; }
-        public DbSet<Holes> Holes { get; set; }
+        
         
         public string DbPath { get; }
 
@@ -25,6 +25,9 @@ namespace ScoreCardPlus
         // stored in AppData, hidden
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite($"Data Source={DbPath}");
+
+    
+        
 
     }
 }

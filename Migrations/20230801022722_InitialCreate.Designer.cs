@@ -11,7 +11,7 @@ using ScoreCardPlus;
 namespace ScoreCardPlus.Migrations
 {
     [DbContext(typeof(ScoreCardDBContext))]
-    [Migration("20230726180142_InitialCreate")]
+    [Migration("20230801022722_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -26,19 +26,16 @@ namespace ScoreCardPlus.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("CourseName")
+                    b.Property<string>("Course")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("HoleNumber")
+                    b.Property<int>("NumberofHoles")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("ParScore")
+                    b.Property<int>("NumberofPlayers")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("UserName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("UserScore")
+                    b.Property<int>("ParCourseTotal")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("ID");

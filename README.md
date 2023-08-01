@@ -1,11 +1,11 @@
 # ScoreCard Plus API
 
-API used to generate and store Golf Scorecards from various courses.
+API used to generate and store Golf Scorecards.
 
 ## Description
 
 ScoreCard Plus API will allow create, update, delete scorecards made by user to be stored and retrived upon command.
-A database housing these scorecards will be created using SQLlite/mySQL/etc.
+A database housing these scorecards will be created using SQL/SQLlite/mySQL/etc combined with EF.
 The main goal is to have a functioning API that returns what the user adds and have that info connected to the applicable subject.
 Future plans outside the scope of the class project would include linking the API with a front end such as react.
 
@@ -45,18 +45,18 @@ the last 3 days of class building and implementing the same features as previous
 * Open .sln file 
 * Run Solution
 * Use the POST to generate new Scorecard with "Try it out"
-* Input "CourseName", "Hole", "PAR Score", "Username", etc.
+* Input "Course", "NumberofHoles", "ParCourseTotal", "NumberofPlayers", etc.
 * Category "Holes" allows for input of yardage, Hole Number (1-18), and PAR for that hole.
 * Click Execute to generate new scorecard, Json format displayed
 
 * May also Copy Id generated at top and run GET, try it out, enter ID copied, should retrive created Scorecard's'
 
 ### Help
-* May need to run new build before starting
+* May need to update the database, I usally just use powershell:
 ```
-dotnet build
+dotnet ef update database
 ```
-
+* In case of 500 error in swagger resulting in SQL error regarding Scorecard ID, a new ID must manually be entered with each new POST.
 
 ## Authors
 
@@ -68,6 +68,9 @@ Andrew Franics
 
 ## Version History
 
+* 1.4 
+    * Rebuild of controllers, classes, and fixes applied to database functions
+    * Updated README
 * 1.3
     * Various bug fixes and optimizations
     * See [commit change]() or See [release history]()

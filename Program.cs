@@ -1,7 +1,6 @@
 using Microsoft.OpenApi.Models;
 using ScoreCardPlus;
-using System.Reflection;
-using System.IO;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +13,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Version = "v1.3",
+        Version = "v1.4",
         Title = "ScoreCard Plus API",
         Description = "An ASP.NET Core Web API for managing Golf Course Scorecards",
         TermsOfService = new Uri("https://example.com/terms"),
@@ -23,6 +22,7 @@ builder.Services.AddSwaggerGen(options =>
 
 });
 builder.Services.AddDbContext<ScoreCardDBContext>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
